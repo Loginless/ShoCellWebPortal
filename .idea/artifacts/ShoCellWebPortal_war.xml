@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ShoCellWebPortal:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="UserPortalShoCell-1.war">
+      <element id="artifact" artifact-name="ShoCellWebPortal:war exploded" />
+    </root>
+  </artifact>
+</component>
