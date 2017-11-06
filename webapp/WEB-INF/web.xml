@@ -11,12 +11,12 @@
 
     <servlet>
         <servlet-name>userRegistration</servlet-name>
-        <servlet-class>ua.com.ShoCell.View.RegistrationController</servlet-class>
+        <servlet-class>ua.com.shocell.view.RegistrationController</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>userRegistration</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/index.jsp</url-pattern>
     </servlet-mapping>
 
 </web-app>
