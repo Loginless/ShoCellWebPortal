@@ -5,6 +5,7 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import ua.com.shocell.model.WebUsers;
+import ua.com.shocell.model.WebUsers_;
 
 
 public class DAOUserImpl extends GeneralDAO {

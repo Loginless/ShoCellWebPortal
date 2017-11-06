@@ -39,8 +39,8 @@
                     <url>http://localhost:8080/manager/text</url>
                     <server>TomcatServer</server>
                     <path>/jenkins</path>
-                    <username>user</username>
-                    <password>pass</password>
+                    <username>tomcat</username>
+                    <password>tomcat</password>
                 </configuration>
             </plugin>
 

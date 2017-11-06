@@ -4,6 +4,7 @@ import ua.com.shocell.controller.DAOAbonImpl;
 import ua.com.shocell.controller.DAOUserImpl;
 import ua.com.shocell.controller.GeneralDAO;
 import ua.com.shocell.controller.HibernateUtil;
+import ua.com.shocell.model.WebUsers;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,10 +33,10 @@ public class WebSite {
         DAOAbonImpl DAOAbon = new DAOAbonImpl();
 
 //        //Create WebUser and TestAbonent objects
-//        WebUsers user1 = new WebUsers("User1", "123", true);
-//        WebUsers user2 = new WebUsers("User2", "123", false);
-//        WebUsers user3 = new WebUsers("User3", "123", false);
-//        WebUsers user4 = new WebUsers("User4", "123", false);
+        WebUsers user1 = new WebUsers("User1", "123", true);
+        WebUsers user2 = new WebUsers("User2", "123", false);
+        WebUsers user3 = new WebUsers("User3", "123", false);
+        WebUsers user4 = new WebUsers("User4", "123", false);
 //
 //        //Create Abonents
 //        PrePaid prePaid1 = new PrePaid("name1", "surname1", +380935672020L,true, user1);
@@ -126,12 +127,12 @@ public class WebSite {
 //        System.out.println(result[2]);
         DAOUserImpl daoUser = new DAOUserImpl();
 
-        String login = "user134";
-        if(daoUser.uniqLogin(login) == true) {
-            System.out.println("Ok");
-        } else {
-            System.out.println("NOK");
-        }
+//        String login = "user134";
+//        if(daoUser.uniqLogin(login) == true) {
+//            System.out.println("Ok");
+//        } else {
+//            System.out.println("NOK");
+//        }
 
 
         em.close();

@@ -5,6 +5,7 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import ua.com.shocell.model.Abonents;
+import ua.com.shocell.model.Abonents_;
 
 public class DAOAbonImpl extends GeneralDAO {
     public DAOAbonImpl() {
@@ -19,7 +20,7 @@ public class DAOAbonImpl extends GeneralDAO {
         List<Abonents> result = typedQuery.getResultList();
         return result;
     }
-
+//
     public void deleteByMobNumber(Long mobNumber) {
         CriteriaQuery<Abonents> criteriaQuery = this.criteriaBuilder.createQuery(Abonents.class);
         Root<Abonents> root = criteriaQuery.from(Abonents.class);

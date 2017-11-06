@@ -27,6 +27,7 @@ public class UserRegistrationCommand implements Command {
             }
         }
 
-    }
-}
 
+    }
+
+}
