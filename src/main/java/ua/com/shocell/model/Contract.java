@@ -1,9 +1,12 @@
 package ua.com.shocell.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+@Component
 @Entity
 @Table(
         name = "Contract_Abonents"

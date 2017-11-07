@@ -4,9 +4,12 @@ import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
+import org.springframework.stereotype.Component;
 import ua.com.shocell.model.Abonents;
 import ua.com.shocell.model.Abonents_;
 
+@Component
 public class DAOAbonImpl extends GeneralDAO {
     public DAOAbonImpl() {
     }

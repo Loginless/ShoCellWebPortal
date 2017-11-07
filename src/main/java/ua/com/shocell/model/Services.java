@@ -1,5 +1,7 @@
 package ua.com.shocell.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Cacheable;
@@ -11,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+@Component
 @Entity
 @Cacheable
 @Table(

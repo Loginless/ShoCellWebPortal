@@ -1,6 +1,8 @@
 package ua.com.shocell.model;
 
 
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -12,7 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+@Component
 @Entity
 @Cacheable
 @Table(

@@ -8,6 +8,9 @@
     <artifactId>ShoCellWebPortal</artifactId>
     <version>1</version>
     <packaging>war</packaging>
+    <name>ShoCellWebPortal</name>
+    <url>http://maven.apache.org</url>
+
 
     <!-- Plugins -->
     <build>
@@ -21,6 +24,8 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -37,12 +42,13 @@
                 <version>2.2</version>
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
-                    <server>TomcatServer</server>
-                    <path>/jenkis</path>
+                    <username>admin</username>
+                    <password>pass</password>
                 </configuration>
             </plugin>
-
         </plugins>
+        <finalName>ShoCell</finalName>
+
     </build>
 
     <!-- End Plugins -->
@@ -53,6 +59,8 @@
         <hibernate.core>5.2.11.Final</hibernate.core>
         <hibernate.version>5.2.11.Final</hibernate.version>
         <ehcache.version>3.4.0</ehcache.version>
+        <spring-framework-version>4.3.3.RELEASE</spring-framework-version>
+        <log4j.version>2.9.1</log4j.version>
     </properties>
 
     <dependencies>
@@ -116,13 +124,49 @@
             <version>3.1.0</version>
         </dependency>
         <!-- End Servlet-->
+
         <!-- JSTL library for auto project deployment  -->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
         <!-- End JSTL library -->
+
+        <!-- Spring MVC-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-framework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-framework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-framework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- End Spring MVC-->
+
+
 
         <!-- optional -->
         <!-- Connections pool-->
@@ -137,17 +181,41 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.9.1</version>
+            <version>${log4j.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.9.1</version>
+            <version>${log4j.version}</version>
         </dependency>
 
+        <!-- SLFJ - Facade for many logging libraries-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!-- End Log4J2 -->
+
+        <!-- Validator API-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.1.3.Final</version>
+        </dependency>
+
+
+        <!-- End Validator API-->
+
+
         <!-- End optional -->
-
-
     </dependencies>
 </project>

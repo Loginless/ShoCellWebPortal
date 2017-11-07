@@ -1,9 +1,12 @@
 package ua.com.shocell.controller;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaBuilder;
 
+@Component
 public class HibernateUtil {
     private static HibernateUtil instance;
     private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.hibernate.tutorial.jpa");

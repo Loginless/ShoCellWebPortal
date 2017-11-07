@@ -10,7 +10,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GeneralDAO<T, PK extends Serializable> implements DAOInterface<T, PK> {
     private EntityManagerFactory emf = HibernateUtil.getInstance().getEntityManagerFactory();
     protected EntityManager em;
