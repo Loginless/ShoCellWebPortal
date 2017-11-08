@@ -7,17 +7,18 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="ua.com.shocell.controller"/>
-    <context:component-scan base-package="ua.com.shocell.model"/>
 
     <!--it is link to properties file propertyFile.properties -->
     <bean id="messageSource"
           class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="propertyFile" />
+        <property name="basename" value="app" />
     </bean>
 
+    <!-- Spring view Resolver -->
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
 </beans>
