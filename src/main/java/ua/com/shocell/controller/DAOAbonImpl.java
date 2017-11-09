@@ -15,25 +15,25 @@ public class DAOAbonImpl extends GeneralDAO {
     }
 
     public List<Abonents> getByMobileNumber(Long mobNumber) {
-        CriteriaQuery<Abonents> criteriaQuery = this.criteriaBuilder.createQuery(Abonents.class);
+        CriteriaQuery<Abonents> criteriaQuery = criteriaBuilder.createQuery(Abonents.class);
         Root<Abonents> root = criteriaQuery.from(Abonents.class);
         criteriaQuery.select(root);
-        criteriaQuery.where(this.criteriaBuilder.equal(root.get(Abonents_.mobileNumber), mobNumber));
-        TypedQuery<Abonents> typedQuery = this.em.createQuery(criteriaQuery);
+        criteriaQuery.where(criteriaBuilder.equal(root.get(Abonents_.mobileNumber), mobNumber));
+        TypedQuery<Abonents> typedQuery = em.createQuery(criteriaQuery);
         List<Abonents> result = typedQuery.getResultList();
         return result;
     }
 //
     public void deleteByMobNumber(Long mobNumber) {
-        CriteriaQuery<Abonents> criteriaQuery = this.criteriaBuilder.createQuery(Abonents.class);
+        CriteriaQuery<Abonents> criteriaQuery = criteriaBuilder.createQuery(Abonents.class);
         Root<Abonents> root = criteriaQuery.from(Abonents.class);
         criteriaQuery.select(root);
-        criteriaQuery.where(this.criteriaBuilder.equal(root.get(Abonents_.mobileNumber), mobNumber));
-        TypedQuery<Abonents> typedQuery = this.em.createQuery(criteriaQuery);
+        criteriaQuery.where(criteriaBuilder.equal(root.get(Abonents_.mobileNumber), mobNumber));
+        TypedQuery<Abonents> typedQuery = em.createQuery(criteriaQuery);
         List<Abonents> result = typedQuery.getResultList();
-        this.em.getTransaction().begin();
-        this.em.remove(result.get(0));
-        this.em.getTransaction().commit();
+        em.getTransaction().begin();
+        em.remove(result.get(0));
+        em.getTransaction().commit();
     }
 }
 
